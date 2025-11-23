@@ -1,0 +1,178 @@
+\documentclass[12pt,a4paper]{article}
+
+% ------------------- Packages -------------------
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath,amssymb}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage{CJKutf8}
+\usepackage{indentfirst}
+
+% Fonts: Times New Roman for text & math
+\usepackage{newtxtext,newtxmath}
+\usepackage{mdframed}
+
+% --- 表格相关宏包 ---
+\usepackage[table]{xcolor} % 表格颜色
+\usepackage{textcomp}      % \textvisiblespace
+\usepackage{arydshln}      % 虚线
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{seqsplit}
+\usepackage{colortbl}
+
+% 统一定义颜色与列格式
+\definecolor{tableheaderblue}{RGB}{230,240,255}
+\newcommand{\code}[1]{\ttfamily\footnotesize\seqsplit{#1}}
+\newcolumntype{S}{>{\centering\arraybackslash\ttfamily}p{0.06\textwidth}}
+\newcolumntype{Z}{>{\raggedright\arraybackslash}p{0.26\textwidth}}
+
+% ---- boxed excerpt with caption (可选) ----
+\usepackage{tcolorbox}
+
+% ------------------- Page Style -------------------
+\onehalfspacing
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Information Theory Project 1}  % 课程标题（可修改）
+\rhead{\thepage}
+
+% ------------------- Bibliography -------------------
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{ref.bib} % 参考文献库文件名（可修改）
+
+% =====================================================
+%                     DOCUMENT
+% =====================================================
+\setlength{\parindent}{2em}
+
+\begin{document}
+
+% ==================== COVER PAGE =====================
+\begin{titlepage}
+\centering
+\thispagestyle{empty}
+
+% ----- Logos (自行替换图片路径或删除) -----
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm]{figures/logo.png}
+\end{figure}
+
+\vspace{1cm}
+
+{\Large \textbf{University Name}}\\[6pt]
+{\large \textbf{Course Name}}\\[6pt]
+{\large Academic Year}\\[1.4cm]
+
+{\Large \textbf{Coding Project:}}\\[6pt]
+{\Large \textbf{Project Title Here}}\\[2cm]
+
+% --------- Student info table ---------
+\renewcommand{\arraystretch}{1.8}
+\begin{center}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\begin{tabular}{|C{3.5cm}|C{3.5cm}|C{3.5cm}|C{3.5cm}|}
+\hline
+\textbf{Student's Chinese Name} &
+\textbf{Student's English Name} &
+\textbf{Student's UESTC ID} &
+\textbf{Student's UoG ID} \\
+\hline
+% 填写学生信息行
+% \begin{CJK}{UTF8}{gbsn}张三\end{CJK} & Zhang San & 2023xxxxx & 29xxxxx \\
+% \hline
+\end{tabular}
+\end{center}
+
+\vfill
+\end{titlepage}
+
+% =================== TOC ===================
+\tableofcontents
+\newpage
+
+% =====================================================
+%                    MAIN CONTENT
+% =====================================================
+
+\section{Introduction}
+\subsection{Problem Background}
+% 在此撰写问题背景
+
+\subsection{Restatement of the Problem}
+% 在此重新表述题目与任务
+
+% =====================================================
+\section{Methodology}
+% 概述整体方法框架
+
+\subsection{Baseline Huffman Coding}
+% 描述基线方法
+
+\subsubsection{Standard Huffman Coding}
+% 标准 Huffman 方案
+
+\subsubsection{Extended Huffman Coding}
+% 扩展字符集的 Huffman 方案
+
+\subsection{Lexical-aware Huffman}
+% 词汇感知 Huffman 总体思路
+
+\subsubsection{Dual-Alphabet Lexical-aware Huffman}
+% 双字母表版本
+
+\subsubsection{Tagged Lexical-aware Huffman}
+% 大小写标签版本
+
+\subsection{Improvements Based on Lexical-aware Huffman}
+% 基于词汇模型的改进
+
+\subsubsection{Hybrid Huffman Coding}
+% Hybrid 机制
+
+\subsubsection{Canonical Huffman Coding}
+% Canonical 机制
+
+% =====================================================
+\section{Results and Discussions}
+\subsection{Standard and Extended Huffman Coding}
+% 放入标准 / 扩展实验结果与图表
+
+\subsection{Lexical-aware Huffman Coding}
+% 放入词汇模型实验结果
+
+\subsection{Improvements}
+% 放入 Hybrid / Canonical 对比结果与讨论
+
+% =====================================================
+\section{Project Evaluation and Further Discussion}
+\subsection{Strengths}
+% 总结方案优点
+
+\subsection{Weaknesses}
+% 总结方案不足
+
+\subsection{Further Discussion}
+% 可以写扩展思路和未来工作
+
+% =====================================================
+\section{Conclusion}
+% 总结全文与主要结论
+
+% =====================================================
+\printbibliography
+
+% =====================================================
+\appendix
+\section{Appendix: Source Code Description}
+% 在附录中简要介绍各个代码文件与功能
+
+\end{document}
